@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-function ImageUploadComponent() {
+interface ImagesProps {
+  setProcessed: (processed: boolean) => void;
+}
+
+const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
   const [images, setImages] = useState<string[]>([]); // Store an array of image URLs
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,6 +31,7 @@ function ImageUploadComponent() {
 
   const handleProcessImage = () => {
     console.log("Processing images...");
+    setProcessed(true);
     // Dummy function for processing the images
   };
 
