@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import UploadIcon from '../assets/upload.svg'
+import { useState } from "react";
 
 function ImageUploadComponent() {
   const [image, setImage] = useState<string>();
@@ -10,6 +9,7 @@ function ImageUploadComponent() {
       const reader = new FileReader();
       reader.onload = (e: ProgressEvent<FileReader>) => {
         setImage(e.target?.result as string);
+        console.log("Image uploaded");
       };
       reader.readAsDataURL(file);
     }
@@ -20,19 +20,35 @@ function ImageUploadComponent() {
   };
 
   return (
-    <div className="flex items-center justify-center w-1/2 mx-auto">
-      <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-        <div className="flex flex-col items-center justify-center pt-5 pb-6">
-          <img src={UploadIcon} alt='Upload Icon' className='size-8' />
-          <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-          <p className="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-        </div>
-        <input id="dropzone-file" type="file" className="hidden" onChange={handleImageUpload} />
-      </label>
+    <div className="flex flex-col items-center justify-center ">
+      <div className="flex items-center w-1/2">
+        <label
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          htmlFor="file_input"
+        >
+          Upload file
+        </label>
+        <input
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+          type="file"
+          onChange={handleImageUpload}
+        />
+      </div>
       {image && (
-        <div className="image-preview" style={{ width: '100px', height: '100px' }}>
-          <img src={image} alt="Uploaded" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          <button onClick={handleProcessImage}>Process Image</button>
+        <div className="flex">
+          <img
+            src={image}
+            alt="Uploaded"
+            className="size-52"
+          />
+          <button></button>
+          <button
+            onClick={handleProcessImage}
+            type="button"
+            className="my-auto h-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Process Image
+          </button>
         </div>
       )}
     </div>
