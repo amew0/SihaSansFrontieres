@@ -15,7 +15,7 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
       </video>
       <div className="absolute w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-white mb-4">
-          Welcome Health Quantum and AI App
+          Team 6: Health Quantum and AI App
         </h1>
         <p className="text-lg text-gray-300 mb-8">
           Get ready to experience seamless productivity.
