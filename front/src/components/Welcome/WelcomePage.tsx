@@ -13,9 +13,10 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
         <source src={gazaVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
       <div className="absolute w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-white mb-4">
-          Welcome Health Quantum and AI App
+          Welcome to Our Tool
         </h1>
         <p className="text-lg text-gray-300 mb-8">
           Get ready to experience seamless productivity.
@@ -26,6 +27,9 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
         >
           Start Now
         </button>
+      </div>
+      <div className="absolute bottom-0 left-0 p-4 text-white text-xs bg-black bg-opacity-50">
+        Video Credit to Hanna Duggal, Mohamed Hussein and Soha Elghany from AL JAZEERA
       </div>
     </div>
   );
