@@ -5,7 +5,10 @@ interface ImagesProps {
   setProcessed: (processed: boolean) => void;
 }
 
-const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }) => {
+const ImageUploadComponent: React.FC<ImagesProps> = ({
+  processed,
+  setProcessed,
+}) => {
   const [images, setImages] = useState<string[]>([]); // Store an array of image URLs
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +24,7 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }
           if (e.target?.result) {
             imageUrls.push(e.target.result as string);
             if (imageUrls.length === imageFiles.length) {
-              setImages(imageUrls); // Update state when all images are loaded
+              setImages(imageUrls);
             }
           }
         };
@@ -32,6 +35,7 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }
 
   const handleProcessImage = () => {
     console.log("Processing images...");
+
     setProcessed(true);
     // Dummy function for processing the images
   };
@@ -46,27 +50,20 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }
           Upload folder
         </label>
         <input
-          // ref={fileInputRef}
           className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
           type="file"
           onChange={handleImageUpload}
-          multiple // This is required to select multiple files
+          multiple 
         />
       </div>
       <div className="grid grid-cols-10 gap-4">
-        {" "}
-        {/* Adjust this grid layout as needed */}
-        {images.map((src, index) => (
-          <div className="flex flex-col">
-            <img
-              key={index}
-              src={src}
-              alt={`Uploaded ${index}`}
-              className="size-36"
-            />
-            <span className="mx-auto">{index + 1}</span>
-          </div>
-        ))}
+        {!processed &&
+          images.map((src, index) => (
+            <div key={index} className="flex flex-col">
+              <img src={src} alt={`Uploaded ${index}`} className="size-36" />
+              <span className="mx-auto">{index + 1}</span>
+            </div>
+          ))}
       </div>
       <div className="my-2">
         {images.length > 0 && (
