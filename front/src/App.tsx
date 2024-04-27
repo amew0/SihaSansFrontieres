@@ -55,7 +55,7 @@ const App: React.FC = () => {
                 <div className="flex flex-col gap-4 p-4">
                   <ImageResult images={outputs.images} />
                   <div className="flex justify-between mx-auto">
-                    <img src="/outputs/data/10.jpg" alt="Stats" className="w-1/2" />
+                    <img src="/outputs/confidence.png" alt="Stats" className="w-1/2" />
                     <img src="/outputs/data/10.jpg" alt="Chart" className="w-1/2" />
                   </div>
                 </div>

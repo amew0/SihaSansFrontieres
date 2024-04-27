@@ -4,7 +4,7 @@ interface ImagesProps {
   setProcessed: (processed: boolean) => void;
 }
 
-const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
+const ImageUploadComponent: React.FC<ImagesProps> = ({ setProcessed }) => {
   const [images, setImages] = useState<string[]>([]); // Store an array of image URLs
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,12 +56,15 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
         {" "}
         {/* Adjust this grid layout as needed */}
         {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Uploaded ${index}`}
-            className="size-36"
-          />
+          <div className="flex flex-col">
+            <img
+              key={index}
+              src={src}
+              alt={`Uploaded ${index}`}
+              className="size-36"
+            />
+            <span className="mx-auto">{index+1}</span>
+          </div>
         ))}
       </div>
       <div className="my-2">
@@ -77,6 +80,6 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
       </div>
     </div>
   );
-}
+};
 
 export default ImageUploadComponent;
