@@ -1,9 +1,7 @@
 import React, { useRef, useState } from "react";
 import WelcomePage from "./components/Welcome/WelcomePage";
-import Input from "./components/Input/Input"; // Assume you have this component
+import Input from "./components/Input/Input";
 import ImageResult from "./components/Result/ImageResult";
-import StatsResult from "./components/Result/StatsResult";
-import ChartResult from "./components/Result/ChartResult";
 
 const App: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
