@@ -1,4 +1,6 @@
-import Input from "./componets/Input";
+import { useState } from "react";
+import Input from "./components/Input";
+import ResultPage from "./components/ResultPage";
 
 function App() {
   return (
@@ -8,7 +10,7 @@ function App() {
       </div>
 
       <div className="h-2/3">
-
+        <ResultPage />
       </div>
     </div>
   );
