@@ -37,22 +37,25 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex items-center w-1/2">
-        <label
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          htmlFor="file_input"
-        >
-          Upload folder
-        </label>
+    <>
+      <div className="flex justify-center items-center my-8">
+      <label className="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+        <svg className="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          {/* Icon from Heroicons */}
+          <path d="M16.7,5.3l-2-2C14.5,3.1,14.3,3,14,3H6C5.4,3,5,3.4,5,4v12c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1V6C15,5.7,15.1,5.5,15.3,5.3z M14,7v9H6V5h7v2H14z" />
+          <path d="M8,11h4v2H8V11z" />
+        </svg>
+        <span className="mt-2 text-base leading-normal">Select a file</span>
         <input
           // ref={fileInputRef}
-          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+          className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 hidden"
           type="file"
           onChange={handleImageUpload}
           multiple // This is required to select multiple files
         />
-      </div>
+      </label>
+    </div>
+       
       <div className="grid grid-cols-10 gap-4">
         {" "}
         {/* Adjust this grid layout as needed */}
@@ -79,7 +82,7 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }
           </button>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

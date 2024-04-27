@@ -54,9 +54,9 @@ const App: React.FC = () => {
               <div className="w-full my-4">
                 <div className="flex flex-col gap-4 p-4">
                   <ImageResult images={outputs.images} />
-                  <div className="flex justify-between mx-auto">
-                    <img src="/outputs/confidence.png" alt="Stats" className="w-1/2" />
-                    <img src="/outputs/data/10.jpg" alt="Chart" className="w-1/2" />
+                  <div className="flex w-full justify-between mx-auto">
+                    <img src="/outputs/confidence.png" alt="Stats" className="w-1/2 flex justify-center items-center m-5 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"/>
+                    <img src="/outputs/data/10.jpg" alt="Chart"  className="w-1/2 flex justify-center items-center m-5 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"/>
                   </div>
                 </div>
               </div>

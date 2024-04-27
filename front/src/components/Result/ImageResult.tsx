@@ -10,7 +10,7 @@ const ImageResult: React.FC<ImagesProps> = ({ images }) => {
       <div className="grid grid-cols-10 gap-4">
         {/* Adjust this grid layout as needed */}
         {images.map((src, index) => (
-          <div className="flex flex-col">
+          <div className="flex flex-col rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             <img
               key={index}
               src={src}
