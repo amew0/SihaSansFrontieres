@@ -48,14 +48,14 @@ const App: React.FC = () => {
             className="w-full h-full flex flex-col items-center min-h-screen"
           >
             <div className="w-full p-4 border rounded-lg my-4">
-              <Input setProcessed={setProcessed} />
+              <Input processed={processed} setProcessed={setProcessed} />
             </div>
             {processed && (
               <div className="w-full my-4">
                 <div className="flex flex-col gap-4 p-4">
                   <ImageResult images={outputs.images} />
                   <div className="flex justify-between mx-auto">
-                    <img src="/outputs/data/10.jpg" alt="Stats" className="w-1/2" />
+                    <img src="/outputs/confidence.png" alt="Stats" className="w-1/2" />
                     <img src="/outputs/data/10.jpg" alt="Chart" className="w-1/2" />
                   </div>
                 </div>

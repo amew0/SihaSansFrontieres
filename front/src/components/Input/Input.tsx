@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 interface ImagesProps {
+  processed: boolean;
   setProcessed: (processed: boolean) => void;
 }
 
-const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
+const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }) => {
   const [images, setImages] = useState<string[]>([]); // Store an array of image URLs
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,12 +57,15 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
         {" "}
         {/* Adjust this grid layout as needed */}
         {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Uploaded ${index}`}
-            className="size-36"
-          />
+          <div className="flex flex-col">
+            <img
+              key={index}
+              src={src}
+              alt={`Uploaded ${index}`}
+              className="size-36"
+            />
+            <span className="mx-auto">{index + 1}</span>
+          </div>
         ))}
       </div>
       <div className="my-2">
@@ -71,12 +75,12 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({setProcessed}) => {
             type="button"
             className="my-auto h-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            Process Images
+            Analyze Images
           </button>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default ImageUploadComponent;
