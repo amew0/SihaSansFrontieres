@@ -5,7 +5,7 @@ interface ImagesProps {
   setProcessed: (processed: boolean) => void;
 }
 
-const ImageUploadComponent: React.FC<ImagesProps> = ({ processed, setProcessed }) => {
+const ImageUploadComponent: React.FC<ImagesProps> = ({ setProcessed }) => {
   const [images, setImages] = useState<string[]>([]); // Store an array of image URLs
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
