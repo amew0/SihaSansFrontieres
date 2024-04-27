@@ -48,7 +48,7 @@ const App: React.FC = () => {
             className="w-full h-full flex flex-col items-center min-h-screen"
           >
             <div className="w-full p-4 border rounded-lg my-4">
-              <Input setProcessed={setProcessed} />
+              <Input processed={processed} setProcessed={setProcessed} />
             </div>
             {processed && (
               <div className="w-full my-4">
