@@ -16,10 +16,10 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
 
       <div className="absolute w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-white mb-4">
-          Welcome to Our Tool
+        Team 6: Health Quantum and AI App
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Get ready to experience seamless productivity.
+        <p className="text-lg text-center text-gray-300 mb-8">
+        Medical ML on under represented communities datasets and exploiting inherent quantum noise <br/>for enhanced certainty to relaunch health care war
         </p>
         <button
           onClick={onStarted}
