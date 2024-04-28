@@ -101,8 +101,8 @@ const App: React.FC = () => {
                         </div>
                         <div className="w-[420px] h-96">
                           <div className="w-[420px] h-80 flex flex-col border border-gray-200 text-center font-bold text-3xl justify-center items-center m-5 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                            <div>Final Confidence:</div>
-                            <span>%</span>
+                            <div>Prediction Confidence:</div>
+                            <span>79%</span>
                           </div>
                         </div>
                       </div>
