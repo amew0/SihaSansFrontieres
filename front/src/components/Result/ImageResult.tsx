@@ -17,7 +17,7 @@ const ImageResult: React.FC<ImagesProps> = ({
           <div
             key={index}
             className="flex flex-col"
-            onClick={() => {
+            onMouseEnter={() => {
               setClickedImageIndex(index);
             }}
           >

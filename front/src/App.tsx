@@ -3,42 +3,7 @@ import WelcomePage from "./components/Welcome/WelcomePage";
 import Input from "./components/Input/Input";
 import ImageResult from "./components/Result/ImageResult";
 import AnimatedNavbar from "./components/Navbar";
-
-const icons = [
-  { src: "/icons/brain.jpg", label: "Brain Tumor" },
-  { src: "/icons/brain.jpg", label: "Brain Tumor" },
-  { src: "/icons/brain.jpg", label: "Brain Tumor" },
-  { src: "/icons/brain.jpg", label: "Brain Tumor" },
-  { src: "/icons/brain.jpg", label: "Brain Tumor" },
-  { src: "/icons/brain.jpg", label: "Brain Tumor" },
-];
-
-const outputs = {
-  images: [
-    "/outputs/data/1.jpg",
-    "/outputs/data/2.jpg",
-    "/outputs/data/3.jpg",
-    "/outputs/data/4.jpg",
-    "/outputs/data/5.jpg",
-    "/outputs/data/6.jpg",
-    "/outputs/data/7.jpg",
-    "/outputs/data/8.jpg",
-    "/outputs/data/9.jpg",
-    "/outputs/data/10.jpg",
-  ],
-  mcd: [
-    "/outputs/mcd/1.png",
-    "/outputs/mcd/2.png",
-    "/outputs/mcd/3.png",
-    "/outputs/mcd/4.png",
-    "/outputs/mcd/5.png",
-    "/outputs/mcd/6.png",
-    "/outputs/mcd/7.png",
-    "/outputs/mcd/8.png",
-    "/outputs/mcd/9.png",
-    "/outputs/mcd/10.png",
-  ],
-};
+import { icons, outputs } from "./data";
 
 const App: React.FC = () => {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -92,7 +57,7 @@ const App: React.FC = () => {
                     <img
                       src={icon.src}
                       alt={`Icon ${index + 1}`}
-                      className="w-32 h-32" // Adjusted class name for width and height
+                      className="size-32" // Adjusted class name for width and height
                     />
                     <p className="text-center mt-2">{icon.label}</p>
                   </div>
@@ -113,22 +78,32 @@ const App: React.FC = () => {
                         images={outputs.images}
                         setClickedImageIndex={setClickedImageIndex}
                       />
-                      <div className="flex">
-                        <div className="w-1/3 mx-auto">
+                      <div className="flex mx-auto">
+                        <div className="w-[420px] h-96">
                           <img
                             src="/outputs/confidence.png"
                             alt="Stats"
-                            className="w-96 h-96"
+                            className=""
                           />
                         </div>
-                        <div className="mx-auto">
-                          {clickedImageIndex !== undefined && (
+                        <div className="w-[420px] h-96">
+                          {clickedImageIndex !== undefined ? (
                             <img
                               src={outputs.mcd[clickedImageIndex]}
                               alt="Chart"
-                              className="w-[420px] h-96"
+                              className=""
                             />
+                          ) : (
+                            <div className="w-[420px] h-80 border border-gray-200 text-center my-auto">
+                              Hover over the analyzed images to see more!
+                            </div>
                           )}
+                        </div>
+                        <div className="w-[420px] h-96">
+                          <div className="w-[420px] h-80 flex flex-col border border-gray-200 text-center my-auto font-bold text-ellipsis text-3xl">
+                            <div>Final Confidence:</div>
+                            <span>%</span>
+                          </div>
                         </div>
                       </div>
                     </div>
