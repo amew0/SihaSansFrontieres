@@ -9,16 +9,16 @@ export const icons = [
 
 export const outputs = {
   images: [
-    "/outputs/data/1.jpg",
-    "/outputs/data/2.jpg",
-    "/outputs/data/3.jpg",
-    "/outputs/data/4.jpg",
-    "/outputs/data/5.jpg",
-    "/outputs/data/6.jpg",
-    "/outputs/data/7.jpg",
-    "/outputs/data/8.jpg",
-    "/outputs/data/9.jpg",
-    "/outputs/data/10.jpg",
+    "/outputs/data/1.png",
+    "/outputs/data/2.png",
+    "/outputs/data/3.png",
+    "/outputs/data/4.png",
+    "/outputs/data/5.png",
+    "/outputs/data/6.png",
+    "/outputs/data/7.png",
+    "/outputs/data/8.png",
+    "/outputs/data/9.png",
+    "/outputs/data/10.png",
   ],
   mcd: [
     "/outputs/mcd/1.png",
