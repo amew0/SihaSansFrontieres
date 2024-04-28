@@ -16,10 +16,10 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
 
       <div className="absolute w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-white mb-4">
-        Team 6: Health Quantum and AI App
+          Siha Sans Frontières
         </h1>
         <p className="text-lg text-center text-gray-300 mb-8">
-        Medical ML on under represented communities datasets and exploiting inherent quantum noise <br/>for enhanced certainty to relaunch health care war
+          Quantum facilitated service to relaunch health care
         </p>
         <button
           onClick={onStarted}
@@ -29,7 +29,8 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
         </button>
       </div>
       <div className="absolute bottom-0 left-0 p-4 text-white text-xs bg-black bg-opacity-50">
-        Video Credit to Hanna Duggal, Mohamed Hussein and Soha Elghany from AL JAZEERA
+        Video Credit to Hanna Duggal, Mohamed Hussein and Soha Elghany from AL
+        JAZEERA
       </div>
     </div>
   );
