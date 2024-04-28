@@ -1,2 +1,1 @@
-# website
-website for team 6
+![Team 6](./ELE_NYUAD_12thHackathon_Team-6.jpg "")
