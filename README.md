@@ -45,7 +45,7 @@ This approach aims to exploit the inherent quantum noise to enhance certainty,  
 By harnessing the power of quantum computing, we are not just processing medical data faster; we are making it more reliable and accurate. This innovation marks a crucial advancement in the use of AI in healthcare, setting a new standard for how medical data is analyzed and utilized in clinical settings. It underscores our commitment to pushing the boundaries of what's possible in medical technology and improving patient outcomes through more precise and reliable diagnostic tools.
 
 # Demo
-![Our Demo](demo_sihaSans1.webp)
+![Our Demo](assets/demo_sihaSans1.webp)
 
 # Credit
 This project was developed and will be presented for the Quantum Computing Hackathon at NUYAD for the year 2024
