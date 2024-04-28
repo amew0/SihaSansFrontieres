@@ -83,7 +83,7 @@ const App: React.FC = () => {
                           <img
                             src="/outputs/confidence.png"
                             alt="Stats"
-                            className=""
+                            className="justify-center items-center m-5 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
                           />
                         </div>
                         <div className="w-[420px] h-96">
@@ -91,7 +91,7 @@ const App: React.FC = () => {
                             <img
                               src={outputs.mcd[clickedImageIndex]}
                               alt="Chart"
-                              className=""
+                              className="justify-center items-center m-5 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
                             />
                           ) : (
                             <div className="w-[420px] h-80 border border-gray-200 text-center my-auto">
@@ -100,7 +100,7 @@ const App: React.FC = () => {
                           )}
                         </div>
                         <div className="w-[420px] h-96">
-                          <div className="w-[420px] h-80 flex flex-col border border-gray-200 text-center my-auto font-bold text-ellipsis text-3xl">
+                          <div className="w-[420px] h-80 flex flex-col border border-gray-200 text-center font-bold text-3xl justify-center items-center m-5 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                             <div>Final Confidence:</div>
                             <span>%</span>
                           </div>

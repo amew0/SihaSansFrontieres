@@ -16,7 +16,7 @@ const ImageResult: React.FC<ImagesProps> = ({
         {images.map((src, index) => (
           <div
             key={index}
-            className="flex flex-col"
+            className="flex flex-col rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             onMouseEnter={() => {
               setClickedImageIndex(index);
             }}
