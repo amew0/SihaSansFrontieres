@@ -33,8 +33,10 @@ Our solution optimizes the diagnostic process with an intuitive app engineered f
 ![International Statistics](assets/image-3.png)
 
 ## Application of Quantum Computing 
-In our project, we utilized the Quantum Classical UNet model specifically designed for brain tumor segmentation. This model is a pioneering integration of classical deep learning techniques with quantum computing elements, and it plays a crucial role in our research efforts. We use a hybrid quantum neural network with a quantum bottleneck implemented with pennylane using 4 qbits  
-![alt text](assets/image-4.png)
+In our project, we utilized the Quantum Classical UNet model specifically designed for brain tumor segmentation. This model is a pioneering integration of classical deep learning techniques with quantum computing elements, and it plays a crucial role in our research efforts. We use a hybrid quantum neural network with a quantum bottleneck implemented with pennylane using 4 qbits.
+
+![Classical UNet](assets/image-4.png)
+![Quantum NN bottleneck](assets/unet.png)
 
 This approach aims to exploit the inherent quantum noise to enhance certainty,  our model not only speeds up the process of brain tumor segmentation but also improves the robustness of the results. This ensures that medical professionals can have greater confidence in the AI-supported diagnostics, allowing them to make better-informed decisions for treatment planning.
 
