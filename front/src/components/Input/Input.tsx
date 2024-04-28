@@ -11,7 +11,7 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({
 }) => {
   const [images, setImages] = useState<string[]>([]); // Store an array of image URLs
   const [processingStatus, setProcessingStatus] = useState("");
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [isProcessing, setIsProcessing] = useState<boolean>();
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -42,7 +42,6 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({
         "Removing metadata",
         "Sending anonymized images",
         "Analyzing images",
-        "Upload new files",
         "Processing complete!",
         ""
       ];
@@ -75,7 +74,7 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({
   return (
     <>
       <div className="flex justify-center items-center my-8">
-      <label className="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+      <label className="w-64 flex flex-col items-center px-4 py-6  border border-gray-500 rounded-xl bg-gray-50 shadow-md shadow-gray-500 tracking-wide cursor-pointer hover:bg-blue ">
         <svg className="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
           {/* Icon from Heroicons */}
           <path d="M16.7,5.3l-2-2C14.5,3.1,14.3,3,14,3H6C5.4,3,5,3.4,5,4v12c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1V6C15,5.7,15.1,5.5,15.3,5.3z M14,7v9H6V5h7v2H14z" />
@@ -92,10 +91,10 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({
       </label>
     </div>
        
-      <div className="grid grid-cols-10 gap-4">
+      <div className="flex overflow-x-auto gap-4">
         {!processed &&
           images.map((src, index) => (
-            <div key={index} className="flex flex-col">
+            <div key={index} className="flex-none flex flex-col">
               <img src={src} alt={`Uploaded ${index}`} className="size-36" />
               <span className="mx-auto">{index + 1}</span>
             </div>
@@ -119,7 +118,9 @@ const ImageUploadComponent: React.FC<ImagesProps> = ({
                 ></span>
                 {` ${processingStatus}`}
               </>
-            ) : (
+            ) : 
+            isProcessing===false ? "Analyze new Images" :
+            (
               "Analyze Images"
             )}
           </button>
