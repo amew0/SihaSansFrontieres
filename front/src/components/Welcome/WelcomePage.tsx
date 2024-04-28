@@ -1,5 +1,6 @@
 import React from "react";
 import gazaVideo from "../../assets/GAZA-doctors.mp4";
+import logoPng from "../../assets/logo.png";
 
 const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
   return (
@@ -15,9 +16,12 @@ const WelcomePage: React.FC<{ onStarted: () => void }> = ({ onStarted }) => {
       </video>
 
       <div className="absolute w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-white mb-4">
-          Siha Sans Frontières
-        </h1>
+        <div className="flex">
+          <img src={logoPng} className="size-16" />
+          <h1 className="my-auto text-4xl font-bold text-white mb-4">
+            Siha Sans Frontières
+          </h1>
+        </div>
         <p className="text-lg text-center text-gray-300 mb-8">
           Quantum facilitated service to relaunch health care
         </p>
