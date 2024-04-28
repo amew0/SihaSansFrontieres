@@ -17,9 +17,7 @@ Siha Sans Frontières / صحة بلا حدود  leverages quantum computing to r
 
 
 # Objective
-How can we help overwhelmed doctors? many of whom face a constant influx of patients needing MRI/CT diagnoses.
-
- Our solution accelerates the diagnostic process with an app designed for fast, accurate, and tailored diagnosis. This tool not only speeds up the evaluation of imaging results but also ensures that diagnoses are precisely adapted to the unique needs and conditions of diverse populations, particularly those in underrepresented regions
+Our solution optimizes the diagnostic process with an intuitive app engineered for rapid, precise, and customized medical diagnoses. This innovative tool not only expedites the analysis of imaging data but also guarantees that each diagnosis is finely tuned to meet the specific health needs and conditions of diverse patient populations, especially those from historically underserved areas.
 
 # Case Study
 ![Gaza](images/image-1.png)
@@ -61,4 +59,4 @@ This project was developed and will be presented for the Quantum Computing Hacka
 
 Below is a picture of us:
 
-![Siha Sans Frontières / صحة بلا حدود ](ELE_NYUAD_12thHackathon_Team-6.jpg)
+![Siha Sans Frontières / صحة بلا حدود ](images/ELE_NYUAD_12thHackathon_Team-6.jpg)
