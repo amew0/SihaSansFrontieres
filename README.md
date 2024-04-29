@@ -55,7 +55,7 @@ This project was developed and will be presented for the Quantum Computing Hacka
 - [Ibrahim Elmetwalli](https://www.linkedin.com/in/ibrahim1202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app), University of Science and Technology at Zewail City
 - [Vincent Olagbemide](https://linkedin.com/in/vincent-olagbemide), University of Derby
 - Ekaterina Pankovets, EPFL
-- Amine Ghebreziabiher, Khalifa University | New York University Abu Dhabi
+- [Amine Kidane Ghebreziabiher](https://www.linkedin.com/in/amine-kidane), Khalifa University | New York University Abu Dhabi
 - Shaikha Aysha AlNuaimi, Ajman University
 - [Rama Rami Ziad Hasiba](https://www.linkedin.com/in/ramahasiba/),  An-Najah National University
 - [Imane Hamzaoui](https://www.linkedin.com/in/imane-hamzaoui-667514199/), NYUAD, ESI Algiers
